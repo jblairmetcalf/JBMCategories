@@ -56,12 +56,17 @@ UIImage (Utility)
 
 UIScrollView (Utility)
 
+- (NSInteger)pageInScrollView:(UIScrollView *)scrollView;
 - (NSInteger)currentPageOfScrollView:(UIScrollView *)scrollView;
 - (CGFloat)scrollPercentOfScrollView:(UIScrollView *)scrollView;
 
 UIView (Utility)
 
 - (void)animateView:(UIView *)view withEndAlpha:(CGFloat)endAlpha endScale:(CGFloat)endScale duration:(CGFloat)duration ease:(CGFloat)ease completion:(void (^)(void))completionBlock;
+- (void)setView:(UIView *)view width:(CGFloat)width;
+- (void)setView:(UIView *)view height:(CGFloat)height;
+- (void)setView:(UIView *)view x:(CGFloat)x;
+- (void)setView:(UIView *)view y:(CGFloat)y;
 
 UIViewController (Utility)
 
