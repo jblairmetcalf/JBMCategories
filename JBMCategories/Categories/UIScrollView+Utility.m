@@ -10,13 +10,20 @@
 
 @implementation UIScrollView (Utility)
 
++ (NSInteger)pageInScrollView:(UIScrollView *)scrollView {
+    NSInteger pages = scrollView.contentSize.width/scrollView.frame.size.width;
+    return pages;
+}
+
 + (NSInteger)currentPageOfScrollView:(UIScrollView *)scrollView {
-    NSInteger currentPage = (NSInteger)roundf([UIScrollView scrollPercentOfScrollView:scrollView]);
+    NSInteger pages = [UIScrollView pageInScrollView:scrollView];
+    CGFloat scrollPercent = [UIScrollView scrollPercentOfScrollView:scrollView];
+    NSInteger currentPage = (NSInteger)roundf((pages-1)*scrollPercent);
     return currentPage;
 }
 
 + (CGFloat)scrollPercentOfScrollView:(UIScrollView *)scrollView {
-    CGFloat width = scrollView.frame.size.width;
+    CGFloat width = scrollView.contentSize.width-scrollView.frame.size.width;
     CGFloat scrollPercent = scrollView.contentOffset.x/width;
     return scrollPercent;
 }

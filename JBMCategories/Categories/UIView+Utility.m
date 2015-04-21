@@ -25,4 +25,28 @@
                      }];
 }
 
++ (void)setView:(UIView *)view width:(CGFloat)width {
+    CGRect viewFrame = view.frame;
+    viewFrame.size.width = width;
+    view.frame = viewFrame;
+}
+
++ (void)setView:(UIView *)view height:(CGFloat)height {
+    CGRect viewFrame = view.frame;
+    viewFrame.size.height = height;
+    view.frame = viewFrame;
+}
+
++ (void)setView:(UIView *)view x:(CGFloat)x {
+    CGRect viewFrame = view.frame;
+    viewFrame.origin.x = x;
+    view.frame = viewFrame;
+}
+
++ (void)setView:(UIView *)view y:(CGFloat)y {
+    CGRect viewFrame = view.frame;
+    viewFrame.origin.y = y;
+    view.frame = viewFrame;
+}
+
 @end

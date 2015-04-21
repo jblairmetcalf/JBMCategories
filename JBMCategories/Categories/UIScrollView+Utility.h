@@ -10,6 +10,7 @@
 
 @interface UIScrollView (Utility)
 
++ (NSInteger)pageInScrollView:(UIScrollView *)scrollView;
 + (NSInteger)currentPageOfScrollView:(UIScrollView *)scrollView;
 + (CGFloat)scrollPercentOfScrollView:(UIScrollView *)scrollView;
 
