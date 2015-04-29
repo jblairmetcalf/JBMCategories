@@ -25,6 +25,11 @@
                      }];
 }
 
++ (void)animateView:(UIView *)view withEndAlpha:(CGFloat)endAlpha duration:(CGFloat)duration ease:(CGFloat)ease completion:(void (^)(void))completionBlock {
+    CGFloat endScale = view.transform.a;
+    [UIView animateView:view withEndAlpha:endAlpha endScale:endScale duration:duration ease:ease completion:completionBlock];
+}
+
 + (void)setView:(UIView *)view width:(CGFloat)width {
     CGRect viewFrame = view.frame;
     viewFrame.size.width = width;

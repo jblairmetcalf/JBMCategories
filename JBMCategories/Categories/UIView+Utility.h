@@ -11,6 +11,7 @@
 @interface UIView (Utility)
 
 + (void)animateView:(UIView *)view withEndAlpha:(CGFloat)endAlpha endScale:(CGFloat)endScale duration:(CGFloat)duration ease:(CGFloat)ease completion:(void (^)(void))completionBlock;
++ (void)animateView:(UIView *)view withEndAlpha:(CGFloat)endAlpha duration:(CGFloat)duration ease:(CGFloat)ease completion:(void (^)(void))completionBlock;
 + (void)setView:(UIView *)view width:(CGFloat)width;
 + (void)setView:(UIView *)view height:(CGFloat)height;
 + (void)setView:(UIView *)view x:(CGFloat)x;
